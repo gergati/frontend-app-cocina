@@ -21,7 +21,6 @@ export const AppRouter = () => {
     return (
         <Routes>
             {
-                // Si el estado es 'authenticated', mostrar las rutas de Cocina
                 status === 'authenticated'
                     ? (
                         <>
@@ -30,7 +29,6 @@ export const AppRouter = () => {
                         </>
                     )
                     : (
-                        // Si el estado es 'not-authenticated', mostrar las rutas de autenticación
                         <>
                             <Route path="/auth/*" element={<AuthRoutes />} />
                             <Route path="*" element={<Navigate to="/auth/login" />} />

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { onAddNewRecipe } from '../store/cocina/recipeSlice'
-import { createRecipes, getRecipes, getRecipesById } from "../services/recipes";
+import { createRecipes, getRecipes } from "../services/recipes";
 
 export const useRecipeStore = () => {
     const dispatch = useDispatch();
@@ -45,21 +45,7 @@ export const useRecipeStore = () => {
         return { recipes, getAllRecipes };
     };
 
-    // const getAllRecipeUser = async () => {
-    //     try {
-    //         if (!user) {
-    //             console.error("Usuario no autenticado");
-    //             return null;
-    //         }
 
-    //         const data = await getRecipesById(user.id);
-    //         console.log(data)
-
-    //     } catch (error) {
-    //         console.error("Error al traer recetas por id:", error);
-    //     }
-    //     return { recipes, getAllRecipes };
-    // }
 
 
 
@@ -67,6 +53,5 @@ export const useRecipeStore = () => {
         recipes,
         startAddNewRecipe,
         getAllRecipes,
-        // getAllRecipeUser
     };
 };

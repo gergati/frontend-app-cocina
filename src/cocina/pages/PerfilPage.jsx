@@ -24,7 +24,6 @@ export const PerfilPage = () => {
           setRecipes([])
         }
       } catch (error) {
-        console.error("Error al obtener las recetas:", error)
         setRecipes([])
       }
     }

@@ -3,9 +3,9 @@ import { createSlice } from '@reduxjs/toolkit';
 export const authSlice = createSlice({
     name: 'auth',
     initialState: {
-        status: 'checking', // 'authenticated', 'not-authenticated'
+        status: 'checking',
         user: { id: '', name: '', email: '' },
-        token: null, // Almacena el JWT
+        token: null,
         errorMessage: undefined,
     },
     reducers: {
